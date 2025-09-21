@@ -5,7 +5,7 @@ type InitialData = {
     email: string;
 }
 
-export const {POST} = serve <InitialData>(routeFunction: async (context)) => {
+/*export const {POST} = serve <InitialData>(routeFunction: async (context)) => {
     const {email} = context.requestPayload;
 
     await context.run(stepName: 'new-signup', stepFunction: async () => {
@@ -25,7 +25,7 @@ export const {POST} = serve <InitialData>(routeFunction: async (context)) => {
 
 
     }
-}
+}*/
 
 async function sendEmail(message:string, email: string) {
     console.log(`Sending ${message} email to ${email}`);
