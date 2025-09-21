@@ -28,9 +28,8 @@ type InitialData = {
 }*/
 
 async function sendEmail(message:string, email: string) {
-    console.log(`Sending ${message} email to ${email}`);
+    console.log(`Sending ${message} email to ${email}`)
 }
-
 
 
 type UserState = 'non-active' | 'active';
