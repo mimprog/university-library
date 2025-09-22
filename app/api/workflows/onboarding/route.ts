@@ -1,4 +1,4 @@
-import { serve, duration } from "@upstash/workflow/nextjs";
+import { serve } from "@upstash/workflow/nextjs";
 import { db } from "@/database/drizzle";
 import { users } from "@/database/schema";
 import { eq } from "drizzle-orm";
@@ -49,7 +49,7 @@ export const { POST } = serve<InitialData>(async (context) => {
   });
 
   // Step 2: Wait 3 days
-  await context.sleep("wait-for-3-days", duration("3d"));
+  await context.sleep("wait-for-3-days", "3d");
 
   // Step 3: Periodically check user activity
   while (true) {
@@ -69,7 +69,7 @@ export const { POST } = serve<InitialData>(async (context) => {
     }
 
     // Sleep another 30 days before next check
-    await context.sleep("wait-for-1-month", duration("30d"));
+    await context.sleep("wait-for-1-month", "30d");
   }
 });
 
