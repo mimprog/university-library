@@ -19,6 +19,7 @@ const provider = resend({
 export const sendEmail = async ({email, subject, message}: {email: string, subject:string, message:string}) => {
     await qstashClient.publishJSON({
         provider,
+        path: '/emails',
         body: {
             from: 'Mim Prog <onboarding@resend.dev>',
             to: [email],
