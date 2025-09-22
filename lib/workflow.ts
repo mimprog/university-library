@@ -27,4 +27,6 @@ export const sendEmail = async ({email, subject, message}: {email: string, subje
             html: message
         }
     })
+    console.log("QStash response:");
 }
+
