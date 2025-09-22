@@ -20,7 +20,7 @@ export const sendEmail = async ({email, subject, message}: {email: string, subje
     await qstashClient.publishJSON({
         provider,
         body: {
-            from: 'Mim Prog <>',
+            from: 'Mim Prog <onboarding@resend.dev>',
             to: [email],
             subject,
             html: message
